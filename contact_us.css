@@ -1,0 +1,495 @@
+/* CSS */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Body of webpage */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: sans-serif;
+  }
+  
+  /* id navbar for creating nav bar */
+  #navbar {
+    background: white;
+    color: rgb(13, 26, 38);
+    position: fixed;
+    top: 0;
+    height: 80px;
+    line-height: 80px;
+    width: 100vw;
+    z-index: 1000;
+    padding-right: 70px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+  } 
+  
+  /* styling logo in nav bar */
+  .logo {
+    float: left;
+    margin-left: 40px;
+    height: 75px;
+  }
+  
+  /* id menu for the list so that menu is in the middle */
+  #menu{
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar uordered list styling */
+  #navbar ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+  
+  /* id navbar list in unorder list styling    */
+  #navbar li {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar list in unorder list styling for anchor tag   */
+  #navbar li a {
+    color: rgb(13, 26, 38);
+    display: block;
+    font-size: 0.7em;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar list in unorder list styling  anchor tag when user hovers  */
+  #navbar li a:hover {
+    color: #000000;
+  }
+  
+  /* Animated Bottom Line */
+  #navbar li a:before, #navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -1px;
+    background: #D14B26;;
+  }
+  
+  #navbar li a:before {
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  #navbar li a:after {
+    background: rgb(13, 26, 38);
+    right: 0;
+  }
+  
+  #navbar li a:hover:before {
+    background: #D14B26;;
+    width: 100%;
+    transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  }
+  
+  #navbar li a:hover:after {
+    background: transparent;
+    width: 100%;
+  }
+  
+  .title {
+    color: #D14B26;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  
+  /* class container for left side of the form that inlcudes list */
+  .container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* unordered list for class info */
+  .info ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+  }
+  
+  /* class info list styling  */
+  .info ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* class info list achor tag  */
+  .info ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #605e5e;
+    text-decoration: none;
+    padding-left: 0;
+    transition: padding-left 0.3s ease;
+  }
+  
+  /* class info list achor tag when user hover it will change color */
+  .info ul li a:hover {
+    color: #515151;
+    padding-left: 5px;
+  }
+  
+  /* class form for form styling thats on the right side */
+  .form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 5px rgba(79, 79, 79, 0.1);
+    z-index: 10;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+  }
+  
+  /* class contact-form for postion of the form */
+  .contact-form {
+    background-color: rgba(217, 217, 217, 0.333);
+    position: relative;
+  }
+  
+  /* form styling */
+  form {
+    padding: 20px;
+    z-index: 10; /* z-index ensures that the form doesnot overlap the navigation bar */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* class input-container so that the form data doesnot stay in one place */
+  .input-container {
+    position: relative;
+    margin: 10px;
+  }
+  
+  /* class input for entering user data sizing */
+  .input {
+    width: 100%;
+    outline: none;
+    border: 2px solid #bfbfbf;
+    background: none;
+    padding: 15px;
+    color: #5d5d5d;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  /* class input textarea for entering user data */
+  textarea.input {
+    padding: 10px;
+    min-height: 250px;
+    border-radius: 10px;
+    resize: none;
+    overflow-y: auto;
+  }
+  
+  /* lable manages the appearance of input-container */
+  .input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: #5d5d5d;
+    font-size: 15px;
+    pointer-events: none;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  
+  .input-container.textarea label {
+    top: 10px;
+    transform: translateY(0);
+  }
+  
+  /* class button for styling the button send */
+  .button {
+    padding: 10px;
+    background-color: #D14B26;
+    font-size: 16px;
+    color: #fffdfd;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* class button for styling the button send when user hover */
+  .button:hover {
+    background-color: #e18369;
+  }
+  
+  /* span for class input-container */
+  .input-container span {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    padding: 10px;
+    color: transparent;
+    pointer-events: none;
+  }
+  
+  .input-container span:before,
+  .input-container span:after {
+    content: "";
+    position: absolute;
+    width: 5%;
+    opacity: 0;
+    transition: 0.3s;
+    height: 5px;
+    background-color: #cd4b27;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .input-container span:before {
+    left: 50%;
+  }
+  
+  .input-container span:after {
+    right: 50%;
+  }
+  
+  .input-container.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 15px;
+  }
+  
+  .input-container.focus span:before,
+  .input-container.focus span:after {
+    width: 50%;
+    opacity: 1;
+  }
+  
+  /* class contact-info for postioning the left side of form information */
+  .contact-info {
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* changing color of class title */
+  .contact-info .title {
+    color: #D14B26;
+  }
+  
+  /* class information for details */
+  .information {
+    display: flex;
+    color: #555;
+    margin: 10px;;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  .information i {
+    color: #D14B26;
+  }
+  
+  /* class icon styling */
+  .icon {
+    width: 20px;
+    margin-right: 20px;
+  }
+  
+  /* class social-media */
+  .social-media {
+    padding: 10px;
+  }
+  
+  .social-media p {
+    color: #333;
+  }
+  
+  /* class for social-icons that are from font awosome */
+  .social-icons {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  /* class for social-icons that are from font awosome anchor tag */
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #D14B26, #e97c5e);
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right:10px;
+    transition: 0.3s;
+  }
+  
+  /* when user hovers */
+  .social-icons a:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-info:before {
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    border: 22px solid #D14B26;
+    border-radius: 50%;
+    bottom: -77px;
+    right: 50px;
+    opacity: 0.3;
+  }
+  
+  
+  /* starting of footer tag */
+  /* class footer-container for creating footer */
+  .footer-container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  
+  /* class row for row of footer */
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* class footer for the inside of footer */
+  .footer{
+    background-color: #24262b;
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  /* class footer-col for each column of footer */
+  .footer-col{
+     width: 25%;
+  }
+  
+  /* class footer-col for each column of footer having h4*/
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  /* class footer-col for each column of footer h4 original */
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #D14B26;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  
+  /* class footer-col for each column of footer uordered list */
+  .footer-col ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+  }
+  
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  /* footer-col list for acchor tag */
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  /* footer-col list for acchor tag when user hovers*/
+  .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+  }
+  
+  /* class social links anchor tag styling */
+  .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  
+  /* class social link achchor tag when user hovers */
+  .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /* calss footer-bottom for including copyright info */
+  .footer-bottom{
+    color: #bbbbbb;
+  }
+  
+  /* styling logo-pic for footer */
+  .logo-pic {
+    width: 150px;
+    height: 150px;
+    display: inline-flex;
+    margin-top: 60px;
+  }

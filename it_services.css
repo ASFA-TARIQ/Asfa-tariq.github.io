@@ -1,0 +1,382 @@
+* {
+  transition: all 0.3s ease-out;
+  box-sizing: border-box;
+}
+/* body of the webpage */
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: sans-serif;
+}
+
+
+/* id navbar for creating nav bar */
+#navbar {
+  background: white;
+  color: rgb(13, 26, 38);
+  position: fixed;
+  top: 0;
+  height: 80px;
+  line-height: 80px;
+  width: 100vw;
+  z-index: 1000;
+  padding-right: 70px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.nav-wrapper {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 20px;
+} 
+
+/* styling logo in nav bar */
+.logo {
+  float: left;
+  margin-left: 40px;
+  height: 75px;
+}
+
+/* id menu for the list so that menu is in the middle */
+#menu{
+  margin-bottom: 20px;
+}
+
+/* id navbar uordered list styling */
+#navbar ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+/* id navbar list in unorder list styling    */
+#navbar li {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* id navbar list in unorder list styling for anchor tag   */
+#navbar li a {
+  color: rgb(13, 26, 38);
+  display: block;
+  font-size: 0.7em;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  margin-bottom: 20px;
+}
+
+/* id navbar list in unorder list styling  anchor tag when user hovers  */
+#navbar li a:hover {
+  color: #000000;
+}
+
+/* Animated Bottom Line */
+#navbar li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -1px;
+  background: #D14B26;;
+}
+
+#navbar li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+#navbar li a:after {
+  background: rgb(13, 26, 38);
+  right: 0;
+}
+
+#navbar li a:hover:before {
+  background: #D14B26;;
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+#navbar li a:hover:after {
+  background: transparent;
+  width: 100%;
+}
+
+/* class for styling poster */
+.poster {
+  height: 400px;
+  background-image: url('https://img.freepik.com/premium-photo/businessman-touch-connected-global-network-intelligence-data-science-data-exchange-technology_34200-838.jpg?w=1380');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; 
+  text-align: center;
+}
+
+/* class for styling poster having h1*/
+.poster h1 {
+  color: #ffffff;
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 200px;
+  padding: 10px;
+}
+
+/* class for header that will have animation */
+.header {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s ease-out;
+}
+
+.headerVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* styling heading 1 */
+h1{
+  font-size: 35px;
+  text-align: center;
+}
+
+/* class section for paragarph styling */
+.section p{
+  color: rgb(112, 112, 112); 
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+/* adding padding to class section */
+.section {
+  padding: 30px;
+}
+
+/* container for styling each element od card */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.container:last-child {
+  padding: 0 30px; 
+  justify-content: center; 
+}
+
+/* styling individual card */
+.card {
+  margin: 0 10px; 
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 0 20px; 
+}
+
+h3 {
+  color: #262626;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+}
+
+/* styling for corner of every card */
+.corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #D14B26;
+  border-radius: 0 5px 0 35px;
+  
+}
+
+.star {
+  margin-top: 2px;
+  margin-right: 2px;
+  color: white;
+}
+
+/* styling every card */
+.card {
+  display: block;
+  position:relative;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  margin: 20px;
+  z-index: 100;
+  overflow: hidden;
+  width: 400px;
+  height: 210px;
+  margin-bottom: 24px;
+  padding: 0 20px;
+}
+
+/* animating card */
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #D14B26;
+  height: 45px;
+  width: 45px;
+  border-radius: 42px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card:hover:before {
+  transform: scale(21);
+}
+
+.card:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+
+/* starting of footer tag */
+/* class footer-container for creating footer */
+.footer-container{
+  max-width: 1170px;
+  margin:auto;
+}
+
+/* class row for row of footer */
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* class footer for the inside of footer */
+.footer{
+  background-color: #24262b;
+  padding: 20px 0;
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+/* class footer-col for each column of footer */
+.footer-col{
+   width: 25%;
+}
+
+/* class footer-col for each column of footer having h4*/
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* class footer-col for each column of footer h4 original */
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #D14B26;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+/* class footer-col for each column of footer uordered list */
+.footer-col ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* footer-col list for acchor tag */
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #bbbbbb;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* footer-col list for acchor tag when user hovers*/
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+/* class social links anchor tag styling */
+.social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+/* class social link achchor tag when user hovers */
+.social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/* calss footer-bottom for including copyright info */
+.footer-bottom{
+  color: #bbbbbb;
+}
+
+/* styling logo-pic for footer */
+.logo-pic {
+  width: 150px;
+  height: 150px;
+  display: inline-flex;
+  margin-top: 60px;
+}

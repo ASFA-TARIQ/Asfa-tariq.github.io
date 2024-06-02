@@ -1,0 +1,389 @@
+/* css  */
+*{
+    box-sizing: border-box; 
+  }
+  
+  /* body of the webpage */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: sans-serif;
+  }
+  
+  /* id navbar for creating nav bar */
+  #navbar {
+    background: white;
+    color: rgb(13, 26, 38);
+    position: fixed;
+    top: 0;
+    height: 80px;
+    line-height: 80px;
+    width: 100vw;
+    z-index: 10;
+    padding-right: 70px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+  } 
+  
+  /* styling logo in nav bar */
+  .logo {
+    float: left;
+    margin-left: 40px;
+    height: 75px;
+  }
+  
+  /* id menu for the list so that menu is in the middle */
+  #menu{
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar uordered list styling */
+  #navbar ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+  
+  /* id navbar list in unorder list styling    */
+  #navbar li {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar list in unorder list styling for anchor tag   */
+  #navbar li a {
+    color: rgb(13, 26, 38);
+    display: block;
+    font-size: 0.7em;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar list in unorder list styling  anchor tag when user hovers  */
+  #navbar li a:hover {
+    color: #000000;
+  }
+  
+  /* Animated Bottom Line */
+  #navbar li a:before, #navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -1px;
+    background: #D14B26;;
+  }
+  
+  #navbar li a:before {
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  #navbar li a:after {
+    background: rgb(13, 26, 38);
+    right: 0;
+  }
+  
+  #navbar li a:hover:before {
+    background: #D14B26;;
+    width: 100%;
+    transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  }
+  
+  #navbar li a:hover:after {
+    background: transparent;
+    width: 100%;
+  }
+  
+  /* the main part of the webpage */
+  main {
+    flex: 1;
+    margin-bottom: 100px; 
+  }
+  
+  /* class poster for image display */
+  .poster {
+      height: 400px;
+      background-image: url('https://img.freepik.com/premium-photo/analyst-team-analyzing-business-data-paper-office-table-prodigy_31965-184919.jpg?w=1380');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; 
+      text-align: center;
+    }
+    
+  /* class poster for image in which text can be displayed having h1 */
+  .poster h1 {
+      color: #ffffff;
+      font-size: 40px;
+      display: inline-block;
+      margin-top: 200px;
+      padding: 10px;
+    }
+  
+  /* class container to store each cards   */
+  .container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      margin-top: 70px;
+    }
+  
+  /* class card for styling each card   */
+  .card {
+      position: relative;
+      overflow: hidden;
+      margin: 0 30px; 
+      width: 400px; 
+    }
+    
+  /* class card h2 styling */
+  .card h2{
+      color: #fff;
+      margin-top: 150px;
+      text-align: center;
+  }
+  
+  /* class icon  */
+  .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f00;
+      transition: 0.7s;
+  }
+  
+  /* first card having color #e07768 */
+  .container .card:nth-child(1) .icon {
+      background: #e07768;
+  }
+  
+  /* second card having color #005488 */
+  .container .card:nth-child(2) .icon {
+      background: #005488;
+  }
+  
+  /* third card having color #04ac0c */
+  .container .card:nth-child(3) .icon {
+      background: #04ac0c;
+  }
+  
+  /* class fa */
+  .fa {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      transition: 0.7s;
+      color: #fff;
+  }
+  
+  /* icon i styling the tag that is taken from font awosome */
+  .icon i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      transition: 0.7s;
+      color: #fff;
+  }
+  
+  /* class face for card  */
+  .face {
+      width: 400px;
+      height: 200px;
+      transition: 0.5s;
+  }
+  
+  /* class face1 that will contain icons */
+  .face1 {
+      position: relative;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translateY(100px);
+  }
+  
+  /* when user hovers over face1 */
+  .card:hover .face.face1{
+      transform: translateY(0px);
+  }
+  
+  /* class content for content of face1 */
+  .content {
+      opacity: 1;
+      transition: 0.5s;
+  }
+  
+  /* content of face1 when user hovers */
+  .card:hover .face.face1 .content {
+      opacity: 1;
+  }
+  
+  /* class content tag 1 styling */
+  .content i{
+      max-width: 100px;
+  }
+  
+  /* class face2 for the actual content of face1 */
+  .face2 {
+      position: relative;
+      background: #e8e8e8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      transform: translateY(-100px);
+      height: 200px;
+  
+  }
+  
+  /* face 2 when user hovers */
+  .card:hover .face2{
+      transform: translateY(0);
+  }
+  
+  /* class content p tag */
+  .content p {
+      margin: 0;
+      padding: 10px;
+      text-align: left;
+      color: #414141;
+  }
+  
+  /* starting of footer tag */
+  /* class footer-container for creating footer */
+  .footer-container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  
+  /* class row for row of footer */
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* class footer for the inside of footer */
+  .footer{
+    background-color: #24262b;
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  /* class footer-col for each column of footer */
+  .footer-col{
+     width: 25%;
+  }
+  
+  /* class footer-col for each column of footer having h4*/
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  /* class footer-col for each column of footer h4 original */
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #D14B26;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  
+  /* class footer-col for each column of footer uordered list */
+  .footer-col ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+  }
+  
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  /* footer-col list for acchor tag */
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  /* footer-col list for acchor tag when user hovers*/
+  .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+  }
+  
+  /* class social links anchor tag styling */
+  .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  
+  /* class social link achchor tag when user hovers */
+  .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /* calss footer-bottom for including copyright info */
+  .footer-bottom{
+    color: #bbbbbb;
+  }
+  
+  /* styling logo-pic for footer */
+  .logo-pic {
+    width: 150px;
+    height: 150px;
+    display: inline-flex;
+    margin-top: 60px;
+  }

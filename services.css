@@ -1,0 +1,456 @@
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* id navbar for creating nav bar */
+#navbar {
+  background: white;
+  color: rgb(13, 26, 38);
+  position: fixed;
+  top: 0;
+  height: 80px;
+  line-height: 80px;
+  width: 100vw;
+  z-index: 10;
+  padding-right: 70px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.nav-wrapper {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 20px;
+} 
+
+/* styling logo in nav bar */
+.logo {
+  float: left;
+  margin-left: 40px;
+  height: 75px;
+}
+
+/* id menu for the list so that menu is in the middle */
+#menu{
+  margin-bottom: 20px;
+}
+
+/* id navbar uordered list styling */
+#navbar ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+/* id navbar list in unorder list styling    */
+#navbar li {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* id navbar list in unorder list styling for anchor tag   */
+#navbar li a {
+  color: rgb(13, 26, 38);
+  display: block;
+  font-size: 0.7em;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  margin-bottom: 20px;
+}
+
+/* id navbar list in unorder list styling  anchor tag when user hovers  */
+#navbar li a:hover {
+  color: #000000;
+}
+
+/* Animated Bottom Line */
+#navbar li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -1px;
+  background: #D14B26;;
+}
+
+#navbar li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+#navbar li a:after {
+  background: rgb(13, 26, 38);
+  right: 0;
+}
+
+#navbar li a:hover:before {
+  background: #D14B26;;
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+#navbar li a:hover:after {
+  background: transparent;
+  width: 100%;
+}
+
+/* class for styling poster */
+.poster {
+  height: 400px;
+  background-image: url(https://img.freepik.com/premium-photo/business-concept-close-up-man-using-mobile-smart-phone-infographic-icon-community-technology-digital-concept-hi-tech-big-data-toned-image_150455-8365.jpg?w=1380);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; 
+  text-align: center;
+}
+
+.poster h1 {
+  color: #ffffff;
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 200px;
+  padding: 10px;
+}
+
+/* class for styling the area where there will be image */
+.img-area{
+  margin: 2% auto;
+  overflow: hidden;
+}
+  
+/* styling for single image that will style 3 images so that they are side by side */
+.single-img {
+  position: relative;
+  width: 32%; 
+  display: inline-block;
+  margin: 0 0.5%; 
+  vertical-align: top; 
+  padding: 0; 
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+  
+/* img overylay that allows user to hover and it will show text */
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #9ea1a2;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+  
+.single-img:hover .img-overlay {
+  height: 100%;
+}
+  
+/* class text for styling how the text will appear on img-overlay */
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-family: poppins;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+  
+.text span{
+  font-weight: 300;
+}
+
+/* styling button */
+.button {
+  border-radius: 20px;
+  color: transparent;
+  padding: 12px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 0px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: transparent; 
+  color: rgb(255, 255, 255); 
+  border: 2px solid white;
+}
+  
+.button1:hover {
+  background-color: #D14B26;
+  color: white;
+}  
+
+/* class for styling the block   */
+.block_1 {
+  color: #D14B26;
+  font-size: 20px; 
+  line-height: 0;
+}
+  
+.before {
+  color: rgb(0, 0, 0);
+  font-size: 18px; 
+}
+    
+h2{
+  text-align: center;
+  font-size: 25px;
+}  
+
+/* class for slider  */
+.slider{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* class that will contain the card */
+.slide-container{
+  width: 100%;
+  height: 100%;
+}
+
+.slide-content{
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  overflow: hidden;
+  border-radius: 25px;
+  height: 400px;
+}
+
+/* styling card content */
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* class coumn so that each card has same padding and width */
+.column {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* class for card */
+.card {
+  width: 100%;
+  height: 55%;
+  padding: 10px;
+  background: linear-gradient(#f2f2f2 50%, #D14B26 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  cursor: pointer;
+  transition: .5s ease;
+  border-radius: 25px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+
+p {
+  color: #84869e;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+/* class icon-wrapper so that each icon is displayed where it should be */
+.icon-wrapper {
+  background-color: #D14B26;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+
+/* styling when user hovers over card */
+.card:hover {
+  background-position: 0 100%;
+  height: 100%;
+  
+}
+
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #D14B26;
+}
+
+.card:hover h3 {
+  color: #ffffff;
+}
+
+.card:hover p {
+  color: #f0f0f0;
+}
+
+.swiper-button-next {
+  bottom: 100px;
+  right: 0;
+  position: fixed;
+  z-index: 1000;
+
+}
+
+.swiper-button-prev {
+  left: 0;
+  bottom: 50px;
+  position: fixed;
+  z-index: 1000;
+}
+
+/* starting of footer tag */
+/* class footer-container for creating footer */
+.footer-container{
+  max-width: 1170px;
+  margin:auto;
+}
+
+/* class row for row of footer */
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* class footer for the inside of footer */
+.footer{
+  background-color: #24262b;
+  padding: 20px 0;
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+/* class footer-col for each column of footer */
+.footer-col{
+   width: 25%;
+}
+
+/* class footer-col for each column of footer having h4*/
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* class footer-col for each column of footer h4 original */
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #D14B26;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+/* class footer-col for each column of footer uordered list */
+.footer-col ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* footer-col list for acchor tag */
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #bbbbbb;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* footer-col list for acchor tag when user hovers*/
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+/* class social links anchor tag styling */
+.social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+/* class social link achchor tag when user hovers */
+.social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/* calss footer-bottom for including copyright info */
+.footer-bottom{
+  color: #bbbbbb;
+}
+
+/* styling logo-pic for footer */
+.logo-pic {
+  width: 150px;
+  height: 150px;
+  display: inline-flex;
+  margin-top: 60px;
+}
+

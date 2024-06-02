@@ -1,0 +1,455 @@
+/* CSS */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* body of webpage */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: sans-serif;
+  }
+  
+  /* id navbar for creating nav bar */
+  #navbar {
+    background: white;
+    color: rgb(13, 26, 38);
+    position: fixed;
+    top: 0;
+    height: 80px;
+    line-height: 80px;
+    width: 100vw;
+    z-index: 10;
+    padding-right: 70px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+  } 
+  
+  /* styling logo in nav bar */
+  .logo {
+    float: left;
+    margin-left: 40px;
+    height: 75px;
+  }
+  
+  /* id menu for the list so that menu is in the middle */
+  #menu{
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar uordered list styling */
+  #navbar ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+  
+  /* id navbar list in unorder list styling    */
+  #navbar li {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar list in unorder list styling for anchor tag   */
+  #navbar li a {
+    color: rgb(13, 26, 38);
+    display: block;
+    font-size: 0.7em;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    margin-bottom: 20px;
+  }
+  
+  /* id navbar list in unorder list styling  anchor tag when user hovers  */
+  #navbar li a:hover {
+    color: #000000;
+  }
+  
+  /* Animated Bottom Line */
+  #navbar li a:before, #navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -1px;
+    background: #D14B26;;
+  }
+  
+  #navbar li a:before {
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  #navbar li a:after {
+    background: rgb(13, 26, 38);
+    right: 0;
+  }
+  
+  #navbar li a:hover:before {
+    background: #D14B26;;
+    width: 100%;
+    transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  }
+  
+  #navbar li a:hover:after {
+    background: transparent;
+    width: 100%;
+  }
+  
+  /* class poster for displaying image on the top */
+  .poster {
+    height: 400px;
+      background-image: url(https://img.freepik.com/premium-photo/data-analyst-comparing-charts-recent-year-this-year-document_1423-5264.jpg?w=1380);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    text-align: center;
+  }
+  
+  /* class poster for displaying image on the top adding h1*/
+  .poster h1 {
+    color: #ffffff;
+    font-size: 40px;
+    display: inline-block;
+    margin-top: 200px;
+    padding: 10px;
+  }
+  
+  /* styling class heading having h1 */
+  .heading h1 {
+    color: #0249fd;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 35px;
+  }
+  
+  /* class container for  displaying image and text side by side */
+  .container {
+    display: flex;
+    width: 90%;
+    margin: 65px auto;
+    padding-top: 20px;
+  }
+  
+  /* class content to display text at right having an animation */
+  .content {
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInRight 2s ease; 
+  }
+  
+  /* class content having h3 */
+  .content h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  /* class content having p */
+  .content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* class content-image to display image in left side */
+  .content-image {
+    flex: 1;
+    width: 400px;
+    margin: auto;
+    animation: fadeInUp 2s ease; /* Change the animation to fadeInUp for the image */
+  }
+  
+  /* styling class image */
+  .image {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* animating image */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  /* animating text */
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    }
+  
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+      }
+  }
+   
+  @keyframes fadeInLeftBig {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+  } 
+  
+  /* class text-box */
+  .text-box{
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 1.5;
+  }
+  
+  /* class block-anim for p that will be later used in js */
+  .animated p{
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* class oddo*/
+  .oddo{
+    margin-top: 20px; 
+  }
+  
+  /* class oddo having h2 styling */
+  .oddo h2{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px; 
+  }
+  
+  /* class oddo for p styling */
+  .oddo p{
+    text-align: center;
+    color: #666;
+    font-size: 25px;
+    margin-top: 20px; 
+  }
+  
+  /* class oddo-image for styling the image   */
+  .oddo-image{
+    display: block;
+    border-radius: 10px;
+    border: solid 40px #c063c0;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+   
+  /* class for compairing oddo and tally */
+  .comparison {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* class for compairing oddo and tally having h2 */
+  .comparison h2{
+    margin-top: 10px; 
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  /* class text having h2 */
+  .text h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* class image so that both images are diplayed side by side */
+  .images {
+    top: 0;
+    display: flex;  /* this make sure that image are side by side */
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 1120px;
+  }
+  
+  /* class colum for displaying image  */
+  .column {
+    top: 0;
+    flex: 0 0 auto; 
+    width: calc(50% - 20px); 
+    max-width: calc(50% - 20px); 
+  }
+  
+  .image-1,
+  .image-2 {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .image-2 {
+    margin-left: 20px;
+    border: solid 2px #00635b;
+  }
+  
+  .image-1 {
+    border: solid #bebebe 2px;
+  }
+  
+  
+  /* starting of footer tag */
+  /* class footer-container for creating footer */
+  .footer-container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  
+  /* class row for row of footer */
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* class footer for the inside of footer */
+  .footer{
+    background-color: #24262b;
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  /* class footer-col for each column of footer */
+  .footer-col{
+     width: 25%;
+  }
+  
+  /* class footer-col for each column of footer having h4*/
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  /* class footer-col for each column of footer h4 original */
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #D14B26;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  
+  /* class footer-col for each column of footer uordered list */
+  .footer-col ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+  }
+  
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  /* footer-col list for acchor tag */
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  /* footer-col list for acchor tag when user hovers*/
+  .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+  }
+  
+  /* class social links anchor tag styling */
+  .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  
+  /* class social link achchor tag when user hovers */
+  .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /* calss footer-bottom for including copyright info */
+  .footer-bottom{
+    color: #bbbbbb;
+  }
+  
+  /* styling logo-pic for footer */
+  .logo-pic {
+    width: 150px;
+    height: 150px;
+    display: inline-flex;
+    margin-top: 60px;
+  }
